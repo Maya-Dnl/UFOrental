@@ -4,4 +4,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  devise_for :users
+  resources :flying_saucers do
+    resources :bookings, only: [:new, :create, :index, :show, :edit, :update]
+  end
 end
