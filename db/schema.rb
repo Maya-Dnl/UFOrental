@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_22_104252) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_22_142312) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -29,7 +29,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_104252) do
 
   create_table "flying_saucers", force: :cascade do |t|
     t.string "brand"
-    t.text "despcription"
+    t.text "description"
     t.integer "capacity"
     t.string "planet"
     t.float "price_by_day"
