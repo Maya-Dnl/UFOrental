@@ -10,18 +10,25 @@ require 'faker'
 # user1 = User.create!(email: 'toto@user.com', encrypted_password: '******', username: 'toto')
 # user2 = User.create!(email: 'titi@user.com', encrypted_password: abc567, username: 'titi')
 
-user3 = User.create!(
-  email: "user3@example.com",
-  password: "password456",
-  password_confirmation: "password456",
-  username: "example_user3"
+user10 = User.create!(
+  email: "user10@example.com",
+  password: "pass10",
+  password_confirmation: "pass10",
+  username: "example_user10"
 )
 
-user4 = User.create!(
-  email: "user4@example.com",
-  password: "password789",
-  password_confirmation: "password789",
-  username: "example_user4"
+user11 = User.create!(
+  email: "user11@example.com",
+  password: "pass11",
+  password_confirmation: "pass11",
+  username: "example_user11"
+)
+
+user12 = User.create!(
+  email: "user12@example.com",
+  password: "pass12",
+  password_confirmation: "pass12",
+  username: "example_user12"
 )
 
 flyingsaucer1 = FlyingSaucer.create!(
@@ -30,7 +37,43 @@ flyingsaucer1 = FlyingSaucer.create!(
   capacity: 2,
   planet: "Earth",
   price_by_day: 50.0,
-  user: user3 # Associate the flying saucer with the user
+  user: user10 # Associate the flying saucer with the user
+)
+
+flyingsaucer2 = FlyingSaucer.create!(
+  brand: "UFO Corp",
+  description: "Futuristic flying saucer",
+  capacity: 2,
+  planet: "Earth",
+  price_by_day: 50.0,
+  user: user11 # Associate the flying saucer with the user
+)
+
+flyingsaucer3 = FlyingSaucer.create!(
+  brand: "Galactic Cruiser",
+  description: "Speed through the galaxies",
+  capacity: 1,
+  planet: "Jupiter",
+  price_by_day: 120.0,
+  user: user12
+)
+
+flyingsaucer4 = FlyingSaucer.create!(
+  brand: "Celestial Voyager",
+  description: "Experience zero-gravity adventures",
+  capacity: 3,
+  planet: "Saturn",
+  price_by_day: 90.0,
+  user: user11
+)
+
+flyingsaucer5 = FlyingSaucer.create!(
+  brand: "Neptune Express",
+  description: "Navigate the depths of Neptune",
+  capacity: 2,
+  planet: "Neptune",
+  price_by_day: 55.0,
+  user: user12
 )
 
 # Create a booking associated with the user
@@ -39,7 +82,7 @@ booking1 = Booking.create!(
   end_booking: Date.tomorrow,
   booking_status: "pending",
   total_price: 100.0,
-  user: user4, # Associate the booking with the user
+  user: user11, # Associate the booking with the user
   flying_saucer: flyingsaucer1
 )
 
