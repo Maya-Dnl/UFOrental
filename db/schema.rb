@@ -10,17 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_22_153536) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_23_093128) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
     t.date "start_booking"
     t.date "end_booking"
-    t.string "booking_status"
+    t.string "booking_status", default: "pending"
     t.float "total_price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.bigint "flying_saucer_id", null: false
+    t.index ["flying_saucer_id"], name: "index_bookings_on_flying_saucer_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "flying_saucers", force: :cascade do |t|
@@ -31,6 +35,8 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_153536) do
     t.float "price_by_day"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_flying_saucers_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -46,4 +52,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_22_153536) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "bookings", "flying_saucers"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "flying_saucers", "users"
 end

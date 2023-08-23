@@ -7,18 +7,53 @@ require 'faker'
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-user1 = User.create!(username: "toto")
-user2 = User.create!(username: "titi")
+# user1 = User.create!(email: 'toto@user.com', encrypted_password: '******', username: 'toto')
+# user2 = User.create!(email: 'titi@user.com', encrypted_password: abc567, username: 'titi')
 
-10.times do
-  FlyingSaucer.create!(
-    brand: Faker::Company.name,
-    description: Faker::Lorem.sentence,
-    capacity: rand(1..5),
-    planet: Faker::Space.planet,
-    price_by_day: rand(100..500)
-  )
-end
+user3 = User.create!(
+  email: "user3@example.com",
+  password: "password456",
+  password_confirmation: "password456",
+  username: "example_user3"
+)
+
+user4 = User.create!(
+  email: "user4@example.com",
+  password: "password789",
+  password_confirmation: "password789",
+  username: "example_user4"
+)
+
+flyingsaucer1 = FlyingSaucer.create!(
+  brand: "UFO Corp",
+  description: "Futuristic flying saucer",
+  capacity: 2,
+  planet: "Earth",
+  price_by_day: 50.0,
+  user: user3 # Associate the flying saucer with the user
+)
+
+# Create a booking associated with the user
+booking1 = Booking.create!(
+  start_booking: Date.today,
+  end_booking: Date.tomorrow,
+  booking_status: "pending",
+  total_price: 100.0,
+  user: user4, # Associate the booking with the user
+  flying_saucer: flyingsaucer1
+)
+
+# Create a flying saucer associated with the user
+
+# 10.times do
+#   FlyingSaucer.create!(
+#     brand: Faker::Company.name,
+#     description: Faker::Lorem.sentence,
+#     capacity: rand(1..5),
+#     planet: Faker::Space.planet,
+#     price_by_day: rand(100..500)
+#   )
+# end
 
 # 10.times do
 #   start_date = Faker::Date.between(from: 1.week.ago, to: 1.week.from_now)
