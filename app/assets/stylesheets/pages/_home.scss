@@ -1,1 +1,152 @@
 // Specific CSS for your home-page
+body{
+  background-image: url("https://apod.nasa.gov/apod/image/2308/M31Perseid_Pedrero_1080.jpg");
+  background-size: cover;
+}
+
+.img{
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+h1{
+  color: $title;
+}
+
+h2{
+  color: $title;
+}
+
+h3{
+  color: $title;
+}
+
+ /* Centrer la section contenant le carrousel */
+.container {
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
+  // height: 100vh; /* Ajustez la hauteur selon vos besoins */
+}
+
+//OWL CAROUSEL
+.owl-carousel {
+	position: relative;
+	.owl-item {
+		opacity: 1;
+		&.active {
+			opacity: 1;
+		}
+	}
+
+	.owl-nav {
+		position: absolute;
+		top: 50%;
+		width: 100%;
+		.owl-prev,
+		.owl-next {
+			position: absolute;
+			transform: translateY(-50%);
+			margin-top: -60px;
+			color: rgba(0,0,0,.1) !important;
+			@include transition(.7s);
+			span {
+				&:before {
+					font-size: 30px;
+				}
+			}
+			opacity: 0;
+		}
+		.owl-prev {
+			left: 0;
+		}
+		.owl-next {
+			right: 0;
+		}
+	}
+	.owl-dots {
+		text-align: center;
+		margin-top: 20px;
+		.owl-dot {
+			width: 10px;
+			height: 10px;
+			margin: 5px;
+			border-radius: 50%;
+			background: rgba(0,0,0,.1);
+			position: relative;
+			&:hover, &:focus{
+				outline: none !important;
+			}
+			&.active {
+				background: $primary;
+			}
+		}
+	}
+	&:hover{
+		.owl-nav{
+			.owl-prev,
+			.owl-next{
+				opacity: 1;
+			}
+			.owl-prev {
+				left: -25px;
+			}
+			.owl-next {
+				right: -25px;
+			}
+		}
+	}
+}
+
+.owl-carousel.owl-drag .owl-item {
+	-ms-touch-action: pan-y;
+	touch-action: pan-y;
+}
+
+//WORK
+.work{
+	width: 100%;
+	.img{
+		// width: 100%;
+		// // height: 100px;
+    // // border-radius: 50px;
+		// position: relative;
+
+		-webkit-box-shadow: 0px 20px 35px -30px rgba(0,0,0,0.26);
+		-moz-box-shadow: 0px 20px 35px -30px rgba(0,0,0,0.26);
+		box-shadow: 0px 20px 35px -30px rgba(0,0,0,0.26);
+		.icon{
+			width: 70px;
+			height: 70px;
+			border-radius: 50%;
+			background: $white;
+			display: block;
+			opacity: 0;
+			@include transition(.3s);
+		}
+	}
+	.text{
+		h3{
+			font-size: 18px;
+			font-weight: 500;
+			a{
+				color: $black;
+			}
+		}
+		span{
+			font-size: 12px;
+			letter-spacing: 1px;
+			color: $title;
+			text-transform: uppercase;
+			font-weight: 500;
+		}
+	}
+	&:hover{
+		.img{
+			.icon{
+				opacity: 1;
+			}
+		}
+	}
+}

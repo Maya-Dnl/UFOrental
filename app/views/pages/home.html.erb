@@ -1,2 +1,96 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<body>
+
+		<section class="ftco-section">
+			<div class="container d-flex justify-content-center">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1 class="heading-section mb-4 mt-4 pb-md-4">UFO Rental</h1>
+            <h2 class="heading-section mb-5 pb-md-4">Are you ready to enter in the Alienor Galaxy ? <i class="fa-solid fa-ghost"></i></h2>
+					</div>
+					<div class="col-md-12">
+						<div class="featured-carousel owl-carouse d-flex flex-row justify-content-center">
+							<div class="item m-3">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded">
+                  <%= image_tag("mars.png", alt: "planète Mars", width:"200") %>
+										<%# <img src="images/mars.png" > <!-- class="icon d-flex align-items-center justify-content-center" --> %>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3>Mars</h3>
+										<span>Alienor</span>
+									</div>
+								</div>
+							</div>
+							<div class="item m-3">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded" >
+									   <%= image_tag("planet_jupiter.png", alt: "planète Jupiter", width:"250") %>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3>Jupiter</h3>
+										<span>Alienor</span>
+									</div>
+								</div>
+							</div>
+							<div class="item m-3">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded">
+                      <%= image_tag("planet_earth.jpg", alt: "planète Terre", width:"300") %>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3>Planet Earth</h3>
+										<span>Alienor</span>
+									</div>
+								</div>
+							</div>
+							<div class="item m-3">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded">
+                      <%= image_tag("planet_venus.png", alt: "planète Venus", width:"250") %>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3>Venus</h3>
+										<span>Alienor</span>
+									</div>
+								</div>
+							</div>
+							<div class="item m-3">
+								<div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded">
+                    <%= image_tag("galaxy.jpg", alt: "Galaxy", width:"200") %>
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3>Venus</h3>
+										<span>Alienor</span>
+									</div>
+								</div>
+							</div>
+							<%# <div class="item m-3"> %>
+								<%# <div class="work">
+									<div class="img d-flex align-items-center justify-content-center rounded">
+
+									</div>
+									<div class="text pt-3 w-100 text-center">
+										<h3>Meteoria</h3>
+										<span>Alienor</span>
+									</div>
+								</div>
+							</div> %>
+						</div>
+					</div>
+				</div>
+			</div>
+      <div class="d-flex justify-content-center mb-4 mt-4">
+        <button class="btn btn-success font-weight-bold">Enter to the Alien World <i class="fa-solid fa-rocket"></i></button>
+      </div>
+      <div class="d-flex justify-content-center mb-4">
+        <button class="btn btn-success font-weight-bold">Create your Alien <i class="fa-brands fa-reddit-alien"></i></button>
+      </div>
+    </section>
+
+    <%# <script src="js/jquery.min.js"></script>
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script> %>
+  </body>
