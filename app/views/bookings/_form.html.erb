@@ -1,0 +1,7 @@
+
+<%= simple_form_for Booking.new do |f| %>
+  <%= f.input :start_booking, as: :string, input_html: { class: 'form-control flatpickr', data: { controller: 'flatpickr', flatpickr_locale: 'en', flatpickr_enable_time: false } } %>
+  <%= f.input :end_booking, as: :string, input_html: { class: 'form-control flatpickr', data: { controller: 'flatpickr', flatpickr_locale: 'en', flatpickr_enable_time: false } } %>
+  <%= f.hidden_field :flying_saucer_id, value: flying_saucer.id %>
+  <%= f.submit "Reserve", class: 'btn btn-primary' %>
+<% end %>
