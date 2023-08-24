@@ -1,2 +1,7 @@
 <h1>FlyingSaucers#create</h1>
 <p>Find me in app/views/flying_saucers/create.html.erb</p>
+<%= simple_form_for(article) do |f| %>
+  <!-- [...] -->
+  <%= f.input :photo, as: :file %>
+  <!-- [...] -->
+<% end %>
