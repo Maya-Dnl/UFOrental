@@ -1,2 +1,28 @@
-<h1>FlyingSaucers#show</h1>
-<p>Find me in app/views/flying_saucers/show.html.erb</p>
+<h1><i class="fa-sharp fa-light fa-ufo-beam" style="color: #ffffff;"></i> Are you ready? </h1>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-3">
+      <div class="card">
+        <%= image_tag("flyingsaucer1.jpg", alt: "Flying Saucer Photo", class: "card-img-top") %>
+        <div class="card-body card-with-color">
+          <div class="d-flex align-items-center mb-3">
+            <h5 class="card-title"><%= @flying_saucer.user.username %></h5>
+          </div>
+          <h3 class="card-title"><%= @flying_saucer.planet %></h3>
+          <h4 class="card-subtitle mb-2"><%= @flying_saucer.brand %></h4>
+          <p class="card-text"><%= @flying_saucer.description %></p>
+          <p class="card-text">Capacity: <%= @flying_saucer.capacity %></p>
+          <p class="card-text">Price per Day: €<%= @flying_saucer.price_by_day %></p>
+
+          <%= simple_form_for([@flying_saucer, Booking.new]) do |f| %>
+            <%= f.hidden_field :flying_saucer_id, value: @flying_saucer.id %>
+            <%= link_to "Hop on it", new_flying_saucer_booking_path(@flying_saucer), class: "btn btn-primary" %>
+          <% end %>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
