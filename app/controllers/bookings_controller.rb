@@ -8,7 +8,7 @@ class BookingsController < ApplicationController
 
   def create
     @flying_saucer = FlyingSaucer.find(params[:id])
-    @booking = booking.new(booking_params)
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.flying_saucer = @flying_saucer
     if @booking.save
@@ -19,6 +19,7 @@ class BookingsController < ApplicationController
   end
 
   def index
+    @bookings = Booking.all
   end
 
   def show
