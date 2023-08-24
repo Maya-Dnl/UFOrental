@@ -4,6 +4,7 @@ class FlyingSaucer < ApplicationRecord
   has_many :bookings
   has_one_attached :image
 
+  validates :image, presence: true
   validates :brand, presence: true
   validates :description, presence: true
   validates :planet, presence: true
