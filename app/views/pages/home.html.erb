@@ -1,6 +1,5 @@
 <body>
-
-
+      <div class="cursor"></div>
 			<div class="container d-flex justify-content-center">
 				<div class="row">
 					<div class="col-md-12">
@@ -13,11 +12,13 @@
 							<div class="item m-3">
 								<div class="work">
 									<div class="img d-flex align-items-center justify-content-center rounded">
-                  <%= image_tag("home/planet_moon.png", alt: "planète Mars", width:"200") %>
+                    <a href="flying_saucers">
+                      <%= image_tag("home/planet_moon.png", alt: "planète Luna", width:"200") %>
+                    </a>
 										<%# <img src="images/mars.png" > <!-- class="icon d-flex align-items-center justify-content-center" --> %>
 									</div>
 									<div class="text pt-3 w-100 text-center">
-										<h3>Mars</h3>
+										<h3>Luna</h3>
 										<span>Alienor</span>
 									</div>
 								</div>
@@ -25,7 +26,9 @@
 							<div class="item m-3">
 								<div class="work">
 									<div class="img d-flex align-items-center justify-content-center rounded" >
-									   <%= image_tag("home/planet_aurora.png", alt: "planète Jupiter", width:"250") %>
+                    <a href="flying_saucers">
+									    <%= image_tag("home/planet_aurora.png", alt: "planète Jupiter", width:"250") %>
+                    </a>
 									</div>
 									<div class="text pt-3 w-100 text-center">
 										<h3>Jupiter</h3>
@@ -36,7 +39,9 @@
 							<div class="item m-3">
 								<div class="work">
 									<div class="img d-flex align-items-center justify-content-center rounded">
+                    <a href="flying_saucers">
                       <%= image_tag("home/planet_earth.png", alt: "planète Terre", width:"300") %>
+                    </a>
 									</div>
 									<div class="text pt-3 w-100 text-center">
 										<h3>Planet Earth</h3>
@@ -47,7 +52,9 @@
 							<div class="item m-3">
 								<div class="work">
 									<div class="img d-flex align-items-center justify-content-center rounded">
+                    <a href="flying_saucers">
                       <%= image_tag("home/planet_venus.png", alt: "planète Venus", width:"250") %>
+                    </a>
 									</div>
 									<div class="text pt-3 w-100 text-center">
 										<h3>Venus</h3>
@@ -58,10 +65,12 @@
 							<div class="item m-3">
 								<div class="work">
 									<div class="img d-flex align-items-center justify-content-center rounded">
-                    <%= image_tag("home/planet_solar.png", alt: "Galaxy", width:"200") %>
+                    <a href="flying_saucers">
+                      <%= image_tag("home/planet_solar.png", alt: "Solar", width:"200") %>
+                    </a>
 									</div>
 									<div class="text pt-3 w-100 text-center">
-										<h3>Venus</h3>
+										<h3>Solar</h3>
 										<span>Alienor</span>
 									</div>
 								</div>
@@ -72,7 +81,7 @@
 			</div>
       <div class="button-fixed">
           <button class="btn btn-success font-weight-bold">
-          <a href="new_user_session_path">Enter to the Alien World <i class="fa-solid fa-rocket"></i></a>
+          <a class="link-dark" href="flying_saucers">Enter to the Alien World <i class="fa-solid fa-rocket"></i></a>
         </button>
       </div>
   </body>
