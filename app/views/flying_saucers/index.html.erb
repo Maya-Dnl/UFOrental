@@ -5,7 +5,7 @@
     <% @flying_saucers.each do |saucer| %>
       <div class="col-md-4 mb-4">
         <div class="card">
-          <%= image_tag("flyingsaucer1.jpg", alt: "NA", class: "card-img-top") %>
+          <%= cl_image_tag( saucer.image.key, alt: "NA", class: "card-img-top") %>
           <div class="card-body">
             <h2 class="card-title"><%= saucer.brand %></h2>
             <p class="card-text"><%= saucer.description %></p>
