@@ -35,21 +35,30 @@ button {
 
 
 //SIDEBAR
-.wrapper {
-  width: 100%;
-}
+// .wrapper {
+//   // width: 100%;
+//   display: flex;
+//   height: 100vh;
+//   overflow: hidden;
+// }
 
 #sidebar {
+  width: 0;
   min-width: 300px;
   max-width: 300px;
   background: #32373d;
   color: #fff;
-  transition: all 0.3s;
-  position: relative;
+  transition: width 0.3s, transform 0.3s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
   .h6{
   	color: $white;
   }
   &.active{
+    width: 100%;
   	margin-left: -300px;
   	.custom-menu{
 			margin-right: -50px;
@@ -145,6 +154,7 @@ button {
 		display: inline-block;
 		position: absolute;
 		top: 20px;
+    padding: 20px;
 		right: 0;
 		margin-right: -35px;
 		@include transition(.3s);
@@ -178,7 +188,7 @@ button {
 .bg-wrap{
 	width: 100%;
 	position: relative;
-	z-index: 0;
+	// z-index: 0;
 	&:after{
 		z-index: -1;
 		position: absolute;
