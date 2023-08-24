@@ -1,2 +1,38 @@
-<h1>FlyingSaucers#new</h1>
-<p>Find me in app/views/flying_saucers/new.html.erb</p>
+<h1>Unleach your creativity</h1>
+
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <h3 class="mb-0">Create a New Flying Saucer</h3>
+        </div>
+        <div class="card-body">
+          <%= simple_form_for @flying_saucer, html: { multipart: true } do |f| %>
+            <div class="mb-3">
+              <%= f.input :image, as: :file, input_html: { class: 'form-control' } %>
+            </div>
+            <div class="mb-3">
+              <%= f.input :brand, input_html: { class: 'form-control' } %>
+            </div>
+            <div class="mb-3">
+              <%= f.input :description, as: :text, input_html: { class: 'form-control' } %>
+            </div>
+            <div class="mb-3">
+              <%= f.input :capacity, input_html: { class: 'form-control' } %>
+            </div>
+            <div class="mb-3">
+              <%= f.input :planet, as: :select, collection: ['Earth', 'Galaxy', 'Jupiter', 'Mars', 'Venus'], input_html: { class: 'form-control' } %>
+            </div>
+            <div class="mb-3">
+              <%= f.input :price_by_day, input_html: { class: 'form-control' } %>
+            </div>
+            <div class="text-center">
+              <%= f.submit "Create Flying Saucer", class: 'btn btn-primary' %>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
