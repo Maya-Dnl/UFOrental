@@ -10,7 +10,9 @@ body{
 	background-position: center center;
 }
 
-h1{
+h1.title.heading-section  {
+  font-family: $my-font-UFO;
+  font-size: 70px;
   color: $title;
 }
 
@@ -22,12 +24,10 @@ h3{
   color: $title;
 }
 
- /* Centrer la section contenant le carrousel */
-.container {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
-  // height: 100vh; /* Ajustez la hauteur selon vos besoins */
+.button-fixed {
+  position: fixed;
+  right: 20px;
+  top: 30px;
 }
 
 //OWL CAROUSEL
