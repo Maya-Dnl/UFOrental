@@ -4,14 +4,15 @@ class BookingsController < ApplicationController
   def new
     @booking = Booking.new
     @flying_saucer = FlyingSaucer.find(params[:flying_saucer_id])
+    # @booking.flying_saucer_id = @flying_saucer.id
   end
 
   def create
-    @flying_saucer = FlyingSaucer.find(params[:id])
-    @booking = booking.new(booking_params)
+    @flying_saucer = FlyingSaucer.find(params[:flying_saucer_id])
+    @booking = Booking.new(booking_params)
     @booking.user = current_user
     @booking.flying_saucer = @flying_saucer
-    if @booking.save
+    if @booking.save!
       redirect_to flying_saucers_path
     else
       render :new, status: :unprocessable_entity

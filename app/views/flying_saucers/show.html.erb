@@ -15,11 +15,7 @@
           <p class="card-text">Capacity: <%= @flying_saucer.capacity %></p>
           <p class="card-text">Price per Day: €<%= @flying_saucer.price_by_day %></p>
 
-          <%= simple_form_for([@flying_saucer, Booking.new]) do |f| %>
-            <%= f.hidden_field :flying_saucer_id, value: @flying_saucer.id %>
-            <%= link_to "Hop on it", new_flying_saucer_booking_path(@flying_saucer), class: "btn btn-primary" %>
-          <% end %>
-
+          <%= link_to "Hop on it", new_flying_saucer_booking_path(@flying_saucer), class: "btn btn-primary" %>
 
         </div>
       </div>
