@@ -1,2 +1,18 @@
-<h1>FlyingSaucers#index</h1>
-<p>Find me in app/views/flying_saucers/index.html.erb</p>
+<h1>Discover Flying Saucers</h1>
+<%# We still have to change the images %>
+<div class="container">
+  <div class="row flyingsaucers-list" data-controller="flyingsaucers-list">
+    <% @flying_saucers.each do |saucer| %>
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <%= image_tag("flyingsaucer1.jpg", alt: "NA", class: "card-img-top") %>
+          <div class="card-body">
+            <h2 class="card-title"><%= saucer.brand %></h2>
+            <p class="card-text"><%= saucer.description %></p>
+            <%= link_to 'Deep dive', flying_saucer_path(saucer), class: 'btn btn-primary mt-3' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
