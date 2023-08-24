@@ -37,15 +37,6 @@ h3{
 		-webkit-box-shadow: 0px 20px 35px -30px rgba(0,0,0,0.26);
 		-moz-box-shadow: 0px 20px 35px -30px rgba(0,0,0,0.26);
 		box-shadow: 0px 20px 35px -30px rgba(0,0,0,0.26);
-		.icon{
-			width: 70px;
-			height: 70px;
-			border-radius: 50%;
-			background: $white;
-			display: block;
-			opacity: 0;
-			@include transition(.3s);
-		}
 	}
 	.text{
 		h3{
