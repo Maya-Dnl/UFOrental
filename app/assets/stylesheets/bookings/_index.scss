@@ -1,0 +1,23 @@
+// les importrs des css booking
+
+
+// CSS de l'index des bookings
+.bookings-card{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(0, 255, 98, 0.788);
+}
+
+h1 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+
+p span {
+  text-decoration: underline;
+}
