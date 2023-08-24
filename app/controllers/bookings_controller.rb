@@ -13,7 +13,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     @booking.flying_saucer = @flying_saucer
     if @booking.save!
-      redirect_to flying_saucers_path
+      redirect_to flying_saucer_bookings_path(@flying_saucer)
     else
       render :new, status: :unprocessable_entity
     end
