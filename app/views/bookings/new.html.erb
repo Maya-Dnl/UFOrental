@@ -1,2 +1,18 @@
-<h1>Bookings#new</h1>
-<p>Find me in app/views/bookings/new.html.erb</p>
+<h1>You're Couragious</h1>
+
+<%= simple_form_for Booking.new do |f| %>
+  <%= f.input :start_booking,
+              as: :string,
+              input_html: {
+                class: 'form-control',
+                data: { controller: 'datepicker' }
+              } %>
+  <%= f.input :end_booking,
+              as: :string,
+              input_html: {
+                class: 'form-control',
+                data: { controller: 'datepicker' }
+              } %>
+  <%= f.hidden_field :flying_saucer_id, value: flying_saucer.id %>
+  <%= f.submit 'Go', class: 'btn btn-primary' %>
+<% end %>
