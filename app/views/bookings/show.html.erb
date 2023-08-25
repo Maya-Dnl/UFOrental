@@ -1,10 +1,10 @@
-<div class='text-center'>
-<h1><i class="fas fa-arrow-down text-white"></i> Your Reservation <i class="fas fa-arrow-down text-white"></i></h1>
-<div class="border p-4 col-md-6 mx-auto bg-blue-gradient bookings-card rounded-5">
-        <p class="mb-1"><strong>Your Reservation:</strong> <%= @booking.start_booking.strftime("%d %B %Y") %> - <%= @booking.end_booking.strftime("%d %B %Y") %></p>
-        <p class="mb-1"><strong>Your Booking Status:</strong> <%= @booking.booking_status %></p>
-        <p class="mb-1"><strong>Total Price:</strong> <%= @booking.total_price %> spaceCoin</p>
-        <p class="mb-1"><strong>Your Created:</strong> <%= @booking.created_at.strftime("%d %B %Y") %></p>
-        <p class="mb-1"><strong>Last Updated:</strong> <%= @booking.updated_at.strftime("%d %B %Y") %></p>
-      </div>
+<div class='text-center container'>
+  <h1 class="m-5"><i class="fas fa-arrow-down text-white"></i> Your Booking <i class="fas fa-arrow-down text-white"></i></h1>
+  <div class="border p-5 col-md-6 mx-auto bg-blue-gradient bookings-card rounded-5 d-flex align-items-center m-5">
+        <p class="mb-2"><strong>Your Booking:</strong> <%= @booking.start_booking.strftime("%d %B %Y") %> - <%= @booking.end_booking.strftime("%d %B %Y") %></p>
+        <p class="mb-2"><strong>Your Booking Status:</strong> <%= @booking.booking_status %></p>
+        <p class="mb-2"><strong>Total Price:</strong> <%= @booking.total_price %>250 spaceCoin</p>
+        <p class="mb-2"><strong>Your Created:</strong> <%= @booking.created_at.strftime("%d %B %Y") %></p>
+        <p class="mb-2"><strong>Last Updated:</strong> <%= @booking.updated_at.strftime("%d %B %Y") %></p>
+  </div>
 </div>

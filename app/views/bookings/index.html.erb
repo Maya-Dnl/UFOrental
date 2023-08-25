@@ -7,7 +7,7 @@
     <div class="">
       <% @bookings.each do |booking| %>
         <div class="mb-2 p-3 rounded-2 text-center border">
-          <p class="mb-1"><strong><span>Your Reservation:</span></strong> <%= booking.start_booking.strftime("%d %B %Y") %> - <%= booking.end_booking.strftime("%d %B %Y") %></p>
+          <p class="mb-1"><strong><span>Your Booking:</span></strong> <%= booking.start_booking.strftime("%d %B %Y") %> - <%= booking.end_booking.strftime("%d %B %Y") %></p>
           <p class="mb-1"><strong><span>Your Booking Status:</span></strong> <%= booking.booking_status %></p>
           <div class="text-center mt-4">
             <%= link_to "Go into your reservation !", flying_saucer_booking_path(booking.flying_saucer, booking.id) %>
