@@ -9,6 +9,12 @@ require 'faker'
 
 # user1 = User.create!(email: 'toto@user.com', encrypted_password: '******', username: 'toto')
 # user2 = User.create!(email: 'titi@user.com', encrypted_password: abc567, username: 'titi')
+puts "cleaning data base"
+Booking.destroy_all
+FlyingSaucer.destroy_all
+User.destroy_all
+
+puts "starting seed"
 
 user10 = User.create!(
   email: "user10@example.com",
