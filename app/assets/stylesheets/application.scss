@@ -15,3 +15,13 @@
 .card-with-color {
   background-color: $light-gray;
 }
+
+.card-deck {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.card {
+  flex: 1 0 auto;
+}
