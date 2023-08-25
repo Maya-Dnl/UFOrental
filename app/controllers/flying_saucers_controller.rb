@@ -6,9 +6,19 @@ class FlyingSaucersController < ApplicationController
     @flying_saucer = FlyingSaucer.new
   end
 
+  # def create
+  #   @flying_saucer = FlyingSaucer.new(flying_saucer_params)
+  #   @flying_saucer.save!
+  # end
+
   def create
-    @flying_saucer = FlyingSaucer.new(flying_saucers_params)
-    @flying_saucer.save!
+    @flying_saucer = FlyingSaucer.new(flying_saucer_params)
+    @flying_saucer.user = current_user
+    if @flying_saucer.save!
+      redirect_to @flying_saucer, notice: 'Flying saucer was successfully created.'
+    else
+      render :new
+    end
   end
 
   def index
@@ -35,6 +45,6 @@ class FlyingSaucersController < ApplicationController
   end
 
   def flying_saucer_params
-    params.require(:flying_saucer).permit(:brand, :description, :capacity, :planet, :price_by_day)
+    params.require(:flying_saucer).permit(:brand, :description, :capacity, :planet, :price_by_day, :image)
   end
 end
