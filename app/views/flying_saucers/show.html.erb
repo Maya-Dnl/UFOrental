@@ -4,7 +4,7 @@
   <div class="row justify-content-center">
     <div class="col-md-3">
       <div class="card">
-        <%= image_tag("flyingsaucer1.jpg", alt: "Flying Saucer Photo", class: "card-img-top") %>
+        <%= cl_image_tag(@flying_saucer.image.key) if @flying_saucer.image.present? %>
         <div class="card-body card-with-color">
           <div class="d-flex align-items-center mb-3">
             <h5 class="card-title"><%= @flying_saucer.user.username %></h5>
