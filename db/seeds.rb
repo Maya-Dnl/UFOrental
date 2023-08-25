@@ -45,6 +45,10 @@ flyingsaucer1 = FlyingSaucer.create!(
   price_by_day: 50.0,
   user: user10 # Associate the flying saucer with the user
 )
+flyingsaucer1.image.attach(
+  io:  File.open(File.join(Rails.root, 'app/assets/images/flyingsaucer-rentals/flying-saucer-1.jpg')),
+  filename: 'flying-saucer-1.jpg'
+)
 
 flyingsaucer2 = FlyingSaucer.create!(
   brand: "UFO Corp",
@@ -53,6 +57,10 @@ flyingsaucer2 = FlyingSaucer.create!(
   planet: "Earth",
   price_by_day: 50.0,
   user: user11 # Associate the flying saucer with the user
+)
+flyingsaucer2.image.attach(
+  io:  File.open(File.join(Rails.root, 'app/assets/images/flyingsaucer-rentals/flying-saucer-2.jpg')),
+  filename: 'flying-saucer-2.jpg'
 )
 
 flyingsaucer3 = FlyingSaucer.create!(
@@ -63,6 +71,10 @@ flyingsaucer3 = FlyingSaucer.create!(
   price_by_day: 120.0,
   user: user12
 )
+flyingsaucer3.image.attach(
+  io:  File.open(File.join(Rails.root, 'app/assets/images/flyingsaucer-rentals/flying-saucer-3.jpg')),
+  filename: 'flying-saucer-3.jpg'
+)
 
 flyingsaucer4 = FlyingSaucer.create!(
   brand: "Celestial Voyager",
@@ -72,6 +84,10 @@ flyingsaucer4 = FlyingSaucer.create!(
   price_by_day: 90.0,
   user: user11
 )
+flyingsaucer4.image.attach(
+  io: File.open(File.join(Rails.root, 'app/assets/images/flyingsaucer-rentals/flying-saucer-4.jpg')),
+  filename: 'flying-saucer-4.jpg'
+)
 
 flyingsaucer5 = FlyingSaucer.create!(
   brand: "Neptune Express",
@@ -80,6 +96,10 @@ flyingsaucer5 = FlyingSaucer.create!(
   planet: "Neptune",
   price_by_day: 55.0,
   user: user12
+)
+flyingsaucer5.image.attach(
+  io:  File.open(File.join(Rails.root, 'app/assets/images/flyingsaucer-rentals/flying-saucer-5.jpg')),
+  filename: 'flying-saucer-5.jpg'
 )
 
 # Create a booking associated with the user
@@ -91,6 +111,7 @@ booking1 = Booking.create!(
   user: user11, # Associate the booking with the user
   flying_saucer: flyingsaucer1
 )
+
 
 # Create a flying saucer associated with the user
 
