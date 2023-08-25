@@ -3,6 +3,3 @@ import "@hotwired/turbo-rails"
 import "controllers"
 import "@popperjs/core"
 import "bootstrap"
-
-import {cursorMove} from "./ufo-cursor/ufocursor.js"
-cursorMove();
