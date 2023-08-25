@@ -1,18 +1,27 @@
-<h1>Discover Flying Saucers</h1>
+<h1 class="text-center m-5">Discover Flying Saucers</h1>
 <%# We still have to change the images %>
+
 <div class="container">
-  <div class="row flyingsaucers-list" data-controller="flyingsaucers-list">
-    <% @flying_saucers.each do |saucer| %>
-      <div class="col-md-4 mb-4">
-        <div class="card">
-          <%= cl_image_tag( saucer.image.key, alt: "NA", class: "card-img-top") %>
-          <div class="card-body">
-            <h2 class="card-title"><%= saucer.brand %></h2>
-            <p class="card-text"><%= saucer.description %></p>
-            <%= link_to 'Deep dive', flying_saucer_path(saucer), class: 'btn btn-primary mt-3' %>
+
+  <div class="button text-center m-5">
+    <button class="btn btn-success font-weight-bold mb-2">
+      <a class="link-dark" href="flying_saucers/new">Create new Flying-Saucers<i class="fa-solid fa-rocket"></i></a>
+    </button>
+  </div>
+  <div class="card-deck">
+    <div class="row flyingsaucers-list" data-controller="flyingsaucers-list">
+      <% @flying_saucers.each do |saucer| %>
+        <div class="col-md-4 mb-4">
+          <div class="card">
+            <%= cl_image_tag( saucer.image.key, alt: "NA", class: "card-img-top") %>
+            <div class="card-body">
+              <h2 class="card-title"><%= saucer.brand %></h2>
+              <p class="card-text"><%= saucer.description %></p>
+              <%= link_to 'Deep dive', flying_saucer_path(saucer), class: 'btn btn-primary mt-3' %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
